@@ -20,7 +20,7 @@ for _, route in routes.iterrows():
     coords = [(city1.lat, city1.lon), (city2.lat, city2.lon)]
     
     distance_km = geodesic(coords[0], coords[1]).km
-    est_time_hr = distance_km / 150  # Assume avg speed = 150 km/h
+    est_time_hr = distance_km / 150  # Assuming avg speed = 150 km/h
     
     line = folium.PolyLine(locations=coords, color='blue')
     line.add_to(m)
