@@ -2,18 +2,18 @@ import pandas as pd
 import folium
 from geopy.distance import geodesic
 
-# Load city data
+# Loading the city data
 cities = pd.read_csv("city_coords.csv")
 routes = pd.read_csv("routes.csv")
 
-# Create a base map
+# Creating a base map
 m = folium.Map(location=[50, 10], zoom_start=4)
 
-# Add city markers
+# Adding city markers
 for _, row in cities.iterrows():
     folium.Marker([row.lat, row.lon], popup=row.city).add_to(m)
 
-# Draw routes and calculate distance
+# Drawing routes and calculating distance
 for _, route in routes.iterrows():
     city1 = cities[cities.city == route['from']].iloc[0]
     city2 = cities[cities.city == route['to']].iloc[0]
@@ -27,6 +27,6 @@ for _, route in routes.iterrows():
 
     folium.Popup(f"{route['from']} → {route['to']}: {distance_km:.1f} km, {est_time_hr:.1f} h").add_to(line)
 
-# Save map
+# Saving the map
 m.save("train_routes_map.html")
 print("Map saved as train_routes_map.html")
