@@ -10,6 +10,11 @@ It shows connections between cities on an interactive map.
 - Draws lines between cities on a map using folium
 - Outputs a clickable HTML map
 
+## Live Demo
+
+You can view the interactive European train routes map here:  
+[https://amrish-r.github.io/european-train-routes/](https://amrish-r.github.io/european-train-routes/)
+
 ## 📁 Files included
 
 - `main.py` → Python script that creates the map
