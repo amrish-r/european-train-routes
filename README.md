@@ -27,7 +27,6 @@ It shows connections between cities on an interactive map.
 - How to work with geospatial data in Python
 - How to calculate distances using `geopy`
 - How to use `folium` to build a map
-- How to publish a Python project on GitHub
 
 ## 🔧 Tools/Libraries Used
 
